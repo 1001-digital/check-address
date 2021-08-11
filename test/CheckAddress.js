@@ -1,7 +1,7 @@
 const { expect } = require('chai')
 const { ethers } = require('hardhat')
 
-describe('CheckAddress Library', async () => {
+describe('CheckAddress Library', () => {
   let CheckAddress,
       DummyContract,
       dummyContract,
@@ -37,17 +37,37 @@ describe('CheckAddress Library', async () => {
     expect(await library.isExternal(dummyContract.address)).to.be.false
   })
 
-  it('Should work when called from within a contract constructor', async () => {
-    const CallerContract = await ethers.getContractFactory('CallFromConstructor', {
-      libraries: {
-        CheckAddress: library.address,
-      },
+  describe('Beware of the Exploit', () => {
+    let OnlyExternal,
+        Attacker,
+        contract
+
+    beforeEach(async () => {
+      OnlyExternal = await ethers.getContractFactory('OnlyExternal', {
+        libraries: {
+          CheckAddress: library.address,
+        },
+      })
+      Attacker = await ethers.getContractFactory('CallerContract')
+
+      // The contract to be attacked
+      contract = await OnlyExternal.deploy();
     })
 
-    const checkContract = await CallerContract.deploy(dummyContract.address)
-    expect(await checkContract.isContract()).to.be.true
+    it('Can be exploited when called from within a contract constructor', async () => {
+      // Can circumvent isExtternal check when calling from a constructor
+      // Simple `msg.sender == tx.origin` doesn't have this particular issue.
+      const attacker = await Attacker.deploy(contract.address)
+      expect(await attacker.circumventedInConstructor()).to.be.true
+    })
 
-    const checkExternal = await CallerContract.deploy(external.address)
-    expect(await checkExternal.isContract()).to.be.false
+    it('Can\'t be exploited when called after contract deployment', async () => {
+      const attacker = await Attacker.deploy(contract.address)
+
+      // Calling after deployment works fine.
+      await expect(attacker.tryToCircumventAfterConstruction())
+        .to.be.revertedWith("Must not call from a contract")
+    })
   })
+
 })

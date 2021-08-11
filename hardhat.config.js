@@ -36,6 +36,6 @@ module.exports = {
     currency: 'USD',
     gasPrice: 45,
     coinmarketcap: process.env.COINMARKETCAP_API_KEY,
-    excludeContracts: ['Test'],
+    excludeContracts: ['DummyContract', 'OnlyExternal', 'CallerContract'],
   },
 };

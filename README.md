@@ -1,10 +1,9 @@
-# Check Address Library
+# Check Address
 A Solidity library for the Ethereum blockchain to easily distinguish between smart contract and external addresses.
 
-## Deployments
-- Mainnet: *TODO*
-- Ropsten: `0x87f11cba2Db0cB22b9679c14860bA5Be49Fd0717`
-- Rinkeby: `0x029374cA831F9F4B04a0D896B8d00CcE05f30D8f`
+***Warning:*** The checks in this library can be circumvented by calling from within a contract constructor. See the tests for a detailed attack example and check out [this discussion](https://ethereum.stackexchange.com/questions/15641/how-does-a-contract-find-out-if-another-address-is-a-contract) exploring the issue. 
+
+Consider carefully whether this is acceptable in your use case.
 
 ## Installation
 
@@ -44,6 +43,11 @@ Note: You can exchange `npm run` for `hh` if you have `hh` installed globally on
 
 Deploy the project via `npm run deploy:{NETWORK}` with `NETWORK` being one of `localhost|rinkeby|ropsten|mainnet`.
 
+### Live Deployments
+- Mainnet: *TODO*
+- Ropsten: `0x87f11cba2Db0cB22b9679c14860bA5Be49Fd0717`
+- Rinkeby: `0x029374cA831F9F4B04a0D896B8d00CcE05f30D8f`
+
 ## Thank You
 
-If you have any **improvement suggestions**, **feedback** or **bug reports** please feel free add an issue, or reach out via Twitter [@jwahdatehagh](https://twitter.com/jwahdatehagh) or Email [jalil@1001-digital.digital](jalil@1001-digital.digital).
+If you have any **improvement suggestions**, **feedback** or **bug reports** please feel free add an issue, or reach out via Twitter [@jwahdatehagh](https://twitter.com/jwahdatehagh) or Email [jalil@1001.digital](jalil@1001.digital).
