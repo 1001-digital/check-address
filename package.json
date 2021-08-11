@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "A simple smart contract helper library to test address type.",
   "scripts": {
-    "test": "hardhat test"
+    "test": "hardhat test",
+    "node": "hardhat node",
+    "deploy:localhost": "hardhat run scripts/deploy.js --network localhost",
+    "deploy:rinkeby": "hardhat run scripts/deploy.js --network rinkeby",
+    "deploy:ropsten": "hardhat run scripts/deploy.js --network ropsten",
+    "deploy:mainnet": "hardhat run scripts/deploy.js --network mainnet"
   },
   "repository": {
     "type": "git",
@@ -11,6 +16,7 @@
   },
   "keywords": [
     "ethereum",
+    "solidity",
     "smart contracts"
   ],
   "author": "jalil.eth",
