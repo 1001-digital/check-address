@@ -1,6 +1,6 @@
 {
   "name": "@1001-digital/check-address",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple smart contract helper library to test address type.",
   "scripts": {
     "test": "hardhat test",
