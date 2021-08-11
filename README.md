@@ -23,7 +23,7 @@ A Solidity library for the Ethereum blockchain to easily distinguish between sma
 const CheckAddress = await ethers.getContractFactory('CheckAddress');
 const library = await CheckAddress.deploy()
 
-await ethers.getContractFactory('MyContract', {
+const MyContract = await ethers.getContractFactory('MyContract', {
   libraries: {
     CheckAddress: library.address,
   },
