@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A simple smart contract helper library to test address type.",
   "scripts": {
-    "test": "harthat test"
+    "test": "hardhat test"
   },
   "repository": {
     "type": "git",
