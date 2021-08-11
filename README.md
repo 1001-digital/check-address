@@ -18,7 +18,7 @@ A Solidity library for the Ethereum blockchain to easily distinguish between sma
    }
    ```
 
-*Note:* You might have to link your contract for testing during development:
+*Note:* You will have to link the library when creating your contract during development:
 ```js
 const CheckAddress = await ethers.getContractFactory('CheckAddress');
 const library = await CheckAddress.deploy()
