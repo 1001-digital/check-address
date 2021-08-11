@@ -37,7 +37,7 @@ describe('CheckAddress Library', async () => {
     expect(await library.isExternal(dummyContract.address)).to.be.false
   })
 
-  it('Shoud also when called from within a contract constructor', async () => {
+  it('Should work when called from within a contract constructor', async () => {
     const CallerContract = await ethers.getContractFactory('CallFromConstructor', {
       libraries: {
         CheckAddress: library.address,
