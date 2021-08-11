@@ -3,6 +3,7 @@ A Solidity library for the Ethereum blockchain to easily distinguish smart contr
 
 ## Deployments
 - Mainnet: *TODO*
+- Ropsten: `0x87f11cba2Db0cB22b9679c14860bA5Be49Fd0717`
 - Rinkeby: `0x029374cA831F9F4B04a0D896B8d00CcE05f30D8f`
 
 ## Installation
