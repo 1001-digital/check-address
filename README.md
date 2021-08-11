@@ -2,8 +2,8 @@
 A Solidity library for the Ethereum blockchain to easily distinguish smart contract and external addresses.
 
 ## Deployments
-- Mainnet: `0x`
-- Rinkeby: `0x`
+- Mainnet: *TODO*
+- Rinkeby: `0x029374cA831F9F4B04a0D896B8d00CcE05f30D8f`
 
 ## Installation
 
@@ -19,5 +19,18 @@ A Solidity library for the Ethereum blockchain to easily distinguish smart contr
 
 ## Local Development
 
-1. `npm install`
-2. `npm run test` / `hh test` (if you have `hh` installed locally.
+To set up your environment run `npm install`.
+
+Note: You can exchange `npm run` for `hh` if you have `hh` installed globally on your system.
+
+- Run the test suite: `npm run test`
+- Spin up a local development blockchain: `npm run node`
+- Deploy the contract with `npm run deploy:localhost`
+
+## Deployment
+
+Deploy the project via `npm run deploy:{NETWORK}` with `NETWORK` being one of `localhost|rinkeby|ropsten|mainnet`.
+
+## Thank You
+
+If you have any **improvement suggestions**, **feedback** or **bug reports** please feel free to reach out via Twitter [@jwahdatehagh](https://twitter.com/jwahdatehagh) or Email [jalil@1001.digital](jalil@1001.digital).
