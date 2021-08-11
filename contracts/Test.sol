@@ -1,9 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-// =======================================================================
-// Test Contract
-// =======================================================================
+/// @title Just a dummy contract in order to test the library.
 contract Test {
     uint256 public count;
 

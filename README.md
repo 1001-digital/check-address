@@ -1,5 +1,5 @@
 # Check Address Library
-A Solidity library for the Ethereum blockchain to easily distinguish smart contract and external addresses.
+A Solidity library for the Ethereum blockchain to easily distinguish between smart contract and external addresses.
 
 ## Deployments
 - Mainnet: *TODO*
@@ -34,4 +34,4 @@ Deploy the project via `npm run deploy:{NETWORK}` with `NETWORK` being one of `l
 
 ## Thank You
 
-If you have any **improvement suggestions**, **feedback** or **bug reports** please feel free to reach out via Twitter [@jwahdatehagh](https://twitter.com/jwahdatehagh) or Email [jalil@1001.digital](jalil@1001.digital).
+If you have any **improvement suggestions**, **feedback** or **bug reports** please feel free add an issue, or reach out via Twitter [@jwahdatehagh](https://twitter.com/jwahdatehagh) or Email [jalil@1001.digital](jalil@1001.digital).
