@@ -8,8 +8,8 @@ A Solidity library for the Ethereum blockchain to easily distinguish between sma
 
 ## Installation
 
-1. In your project run `npm install @1001/check-address`
-2. Within your contract, import the library `import "@1001/check-address/contracts/CheckAddress.sol";`
+1. In your project run `npm install @1001-digital/check-address`
+2. Within your contract, import the library `import "@1001-digital/check-address/contracts/CheckAddress.sol";`
 3. In your code, you can check address types like so: 
    ```solidity
    address account = 0x1234567891011121314151617181920212223242
@@ -17,6 +17,18 @@ A Solidity library for the Ethereum blockchain to easily distinguish between sma
      // ...
    }
    ```
+
+*Note:* You might have to link your contract for testing during development:
+```js
+const CheckAddress = await ethers.getContractFactory('CheckAddress');
+const library = await CheckAddress.deploy()
+
+await ethers.getContractFactory('MyContract', {
+  libraries: {
+    CheckAddress: library.address,
+  },
+});
+```
 
 ## Local Development
 
@@ -34,4 +46,4 @@ Deploy the project via `npm run deploy:{NETWORK}` with `NETWORK` being one of `l
 
 ## Thank You
 
-If you have any **improvement suggestions**, **feedback** or **bug reports** please feel free add an issue, or reach out via Twitter [@jwahdatehagh](https://twitter.com/jwahdatehagh) or Email [jalil@1001.digital](jalil@1001.digital).
+If you have any **improvement suggestions**, **feedback** or **bug reports** please feel free add an issue, or reach out via Twitter [@jwahdatehagh](https://twitter.com/jwahdatehagh) or Email [jalil@1001-digital.digital](jalil@1001-digital.digital).
