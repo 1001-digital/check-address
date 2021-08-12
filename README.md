@@ -44,7 +44,7 @@ Note: You can exchange `npm run` for `hh` if you have `hh` installed globally on
 Deploy the project via `npm run deploy:{NETWORK}` with `NETWORK` being one of `localhost|rinkeby|ropsten|mainnet`.
 
 ### Live Deployments
-- Mainnet: *TODO*
+- Mainnet: `0x32336A625aacFA08fe9723d901FFf92A7E3465c1`
 - Ropsten: `0x87f11cba2Db0cB22b9679c14860bA5Be49Fd0717`
 - Rinkeby: `0x029374cA831F9F4B04a0D896B8d00CcE05f30D8f`
 
